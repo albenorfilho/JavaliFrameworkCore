@@ -24,7 +24,8 @@ public static ResultadoAvaliacao run(String testepath, String implementacaopath,
 		
 		double valor = 0;
 		String message = "Métodos que deram defeito: ";
-    	
+    	/*Aqui fazemos a criação dos classloaders, responsáveis por carregar nossas classes
+    	 * mesmo que tenham o mesmo nome, sem dar conflitos.*/
 		URLClassLoader loader = (URLClassLoader)ClassLoader.getSystemClassLoader();
     	MyClassLoader l = new MyClassLoader(loader.getURLs());
     	
